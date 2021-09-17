@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+html {
+  margin: 0;
+  padding: 0;
+  /* gives element 100% height of its parent contanier */
+  height: 100%;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: linear-gradient(to Ttop, rgb(117, 132, 132), white);
+  font-family: 'Nunito', sans-serif;
+  }
+
+.container {
+  /* positioned relative to its normal position (top, bottom, left and right moves it from normal position */
+  position: relative; 
+  /* make element as wide as parent container, extra spacing will be done disrearding parent container */
+  width: 100%;
+  /* element automatically adjusts height to display its content correctly, stops anything that would override rule */
+  height: auto !important;
+  height: 100%;
+  /* the shortest an element can be */
+  min-height: 100%;
+  /* height of footer */
+  padding-bottom: 40px;
+  }
+
+.iconlist {
+  list-style-type: none;
+  width: 100%;
+  /* container flexbox positions */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ }
+
+.iconlist li {
+  width: 100px;
+}
+
+.topbar {
+  /* automatically find left and right margins and set them equal */
+  margin: 0 auto;
+  padding-top: 0px;
+  background-color: black;
+  /* content is clipped to fit the element's box */
+  overflow: hidden;
+  position: sticky;
+  /* vertical position of a positioned element */
+  top: 0;
+ }
+
+.topbar a {
+/* element moves to the left of its container  */
+float: left;
+/* takes up the whole width of a new line */
+display: block;
+color: white;
+/* centers text */
+text-align: center;
+padding: 14px;
+text-decoration: none;
+font-size: 17px;
+font-family: 'Nunito', sans-serif;
+}
+
+.topbar a:hover {
+  background-color: green;
+  /* text color */
+  color: black;
+  }
+
+.bottombar {
+  margin: 0 auto;
+  padding-top: 0px;
+  background-color: black;
+  overflow: hidden; 
+  /* vertical position of a positioned element */
+  bottom: 0;
+  /* positioned with reference to the closest parent that has a position relative value. */
+  position:absolute;
+  }
+
+.bottombar a {
+float: left;
+display: block;
+color: white;
+text-align: center;
+padding: 10px;
+text-decoration: none;
+font-size: 10px;
+font-family: 'Nunito', sans-serif;
+}
+
+.bottombar a:hover {
+  background-color: green;
+  color: black;
+}
+
+.beforearray {
+  height: 15px;
+  margin-left: 180px;
+  color: green;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  /* can set width and height and margins and padding can be set and can placed in the same line of adjacent content */
+  display: inline-block;
+  padding-top: 20px;
+   }
+
+.array {
+  height: 15px;
+  color: green;
+  margin-left: 4px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  display: inline-block;
+ }
+
+.card {
+  /* items positioned at center of container */
+  align-items: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* will center the element with a fixed width both on auto */
+  margin-left: auto;
+  margin-right: auto;
+  width: 240px;
+  border: 2px solid black;
+  border-top: none;
+  margin-top: 10px;
+  cursor: pointer;
+ }
+  
+ .cardactive {    
+  animation-name: spin;
+  animation-duration: 5s;
+  /* goes through the animation at same speed */
+  animation-timing-function: linear; 
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+.card:hover {
+  transition: background-color 2s ease-out 100ms;
+  background-color: green;
+}
+
+.profile-image {
+  height: 225px;
+  width: 240px;
+}
+
+.act {
+  /* page your on topbar and bottombar will be blue */
+  background: blue;
+  }
+
+.ew { 
+  padding-top: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.text {
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.featured-work {
+  padding-top: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.work-container {
+  /*makes work pictures in same row*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.books, .map {
+  padding: 0 5px;
+}
+          
+.banner {
+/* adds space between logo and name container and underline*/
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+border-bottom: solid 3px gray;
+align-items: center;
+margin-right: 25px;
+margin-left: 25px;
+}
+
+.mapsContainer {
+  width: 100%;
+  /* only way to center map on page*/
+  display: flex;
+  justify-content: center;
+  }
+
+.bots {
+  width: 100%;
+  /* center buttons */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.bot {
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  padding: 5px 20px;
+  border-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.bot:disabled {
+  display: none;
+  cursor: not-allowed;
+}
+
+.centerform {
+/*space ontop of form */
+padding: 1em;
+}
+
+fieldset {
+  border: 1px solid black;
+  border-radius: 2px;
+  /* size of form border */
+  width: 60%;
+  /* center form */
+  margin-left: auto;
+  margin-right: auto;
+  /* around words and border */
+  padding: 1rem;
+  }
+
+input, textarea{
+  display: block;
+  margin-bottom: 0.6rem;
+  width: 100%;
+  font-size: 0.7rem;
+  padding: 0.2rem 0rem;
+  border-radius: 2px;
+  border: 1px solid black
+}
+
+label {
+  display: block;
+  padding-bottom: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+textarea {
+  display: block;
+  height: 7rem;
+  padding: 1rem;
+}
+
+select {
+  display: block;
+  font-size: 0.7rem;
+  width: 100%;
+  border-radius: 2px;
+  padding: 0.2rem 0rem;
+}
+
+.btSumbit {
+  font-size: 1rem;
+  margin-top: 1rem;
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  float: right;
+ 
+}
+
+.btSumbit:hover{
+cursor: pointer;
+background-color: gray;
+  }
+ 
+.btSumbit:disabled{
+background-color: red;
+cursor:not-allowed 
+}
+
+footer {
+/* positioned with reference to the closest parent that has a position relative value. */ 
+position: absolute;
+bottom: 0;
+width: 100%;
+/* this makes the whole footer line black, before this the background only covered the buttons */
+background-color: black;
+text-align: left;
+line-height: 20px;
+height: 40px;
+}
+
+
+
+
+
+
+      
+            
+      
+          
+

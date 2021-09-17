@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="../css/style.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="#" />
+</head>
+<body>
+  <div class="topbar">
+    <a href="../index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="act">Contact</a>
+  </div>
+  <div class="centerform">
+    <form action="https://formspree.io/f/meqvvjgd" method="Post" class="form">
+      <fieldset>
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Your first name" required oninput="myFunction()">
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Your last name">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required oninput="myFunction()">
+        <label for="comment">Add your comment:</label>
+        <textarea id="comment" name="comment" placeholder="Your comments" required oninput="myFunction()" ></textarea>
+        <label for="list">How will you be traveling?</label>
+        <select id="list" name="list" required oninput="myFunction()">
+          <option selected>Select One</option>
+          <option value="first">Bus</option>
+          <option value="second">Car</option>
+          <option value="third">Train</option>
+          <option value="fourth">Airplane</option>
+        </select>
+        <button type="submit" id="btSubmit" class='btSumbit' disabled>Submit</button>
+      </fieldset>
+    </form>
+  </div>
+    <footer>
+      <div class="bottombar">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="act">Contact</a>
+        </div>
+      <div class="beforearray">This page was built using:</div>
+      <div class="array" id="array"></div>
+    </footer>
+    <script src="../js/contact.js"></script>
+    <script src="../js/footer.js"></script>
+</body>
+</html>
