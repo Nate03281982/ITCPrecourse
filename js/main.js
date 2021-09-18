@@ -21,10 +21,15 @@ fetch('https://api.github.com/users/Nate03281982')
     event.stopPropagation()
   }
        
+
+var element = document.getElementById("color");
   /* this toggles the anaimation of spinning the card */  
-  document.getElementById('color').onclick = function() {
-      this.classList.toggle('cardactive');
-  }   
-    
+element.onclick = function() {
+element.classList.toggle('cardactive')
+element.classList.remove("cardactive"); 
+// trigger a DOM reflow 
+void element.offsetWidth;
+element.classList.add("cardactive");
+}
 
  

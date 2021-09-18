@@ -6,7 +6,6 @@
 html {
   margin: 0;
   padding: 0;
-  /* gives element 100% height of its parent contanier */
   height: 100%;
 
 }
@@ -14,6 +13,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  /* gives element 100% height of its parent contanier */
   height: 100%;
   background-image: linear-gradient(to Ttop, rgb(117, 132, 132), white);
   font-family: 'Nunito', sans-serif;
@@ -146,7 +146,10 @@ font-family: 'Nunito', sans-serif;
   animation-name: spin;
   animation-duration: 5s;
   /* goes through the animation at same speed */
-  animation-timing-function: linear; 
+  animation-timing-function: linear;
+  /*makes animation repeat until clicked */
+  animation-iteration-count: 1;
+  
 }
 
 @keyframes spin {
@@ -197,6 +200,7 @@ font-family: 'Nunito', sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  text-align: center;
 }
 
 .books, .map {
@@ -245,6 +249,10 @@ margin-left: 25px;
   cursor: not-allowed;
 }
 
+.words{
+  margin-top: 0px;
+}
+
 .centerform {
 /*space ontop of form */
 padding: 1em;
@@ -267,9 +275,10 @@ input, textarea{
   margin-bottom: 0.6rem;
   width: 100%;
   font-size: 0.7rem;
-  padding: 0.2rem 0rem;
+  /*moves the input a llitle to the right and space top and bottom */
+  padding: 0.2rem;
   border-radius: 2px;
-  border: 1px solid black
+  border: 1px solid black;
 }
 
 label {
@@ -281,8 +290,7 @@ label {
 
 textarea {
   display: block;
-  height: 7rem;
-  padding: 1rem;
+  height: 7rem; 
 }
 
 select {
