@@ -9,44 +9,64 @@
   <link rel="shortcut icon" href="#" />
 </head>
 <body>
-  <div class="topbar">
+  <div class="container">
+    <div class="topbar">
     <a href="../index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html" class="act">Contact</a>
-  </div>
-  <div class="centerform">
-    <form action="https://formspree.io/f/meqvvjgd" method="Post" class="form">
-      <fieldset>
-        <label for="firstname">First Name</label>
-        <input type="text" id="firstname" name="firstname" placeholder="Your first name" required oninput="myFunction()">
-        <label for="lastname">Last Name</label>
-        <input type="text" id="lastname" name="lastname" placeholder="Your last name">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your email" required oninput="myFunction()">
-        <label for="comment">Add your comment:</label>
-        <textarea id="comment" name="comment" placeholder="Your comments" required oninput="myFunction()" ></textarea>
-        <label for="list">How will you be traveling?</label>
-        <select id="list" name="list" required oninput="myFunction()">
-          <option selected>Select One</option>
-          <option value="first">Bus</option>
-          <option value="second">Car</option>
-          <option value="third">Train</option>
-          <option value="fourth">Airplane</option>
-        </select>
-        <button type="submit" id="btSubmit" class='btSumbit' disabled>Submit</button>
-      </fieldset>
-    </form>
-  </div>
+    <a href="about.html" class="act">About</a>
+    <a href="contact.html">Contact</a>
+    </div>
+  <header class="banner">
+    <div class="logo">
+      <img src="../images/face.png" class="logo" alt="logo"
+        hFeight="75" width="75">
+    </div>
+    <div class="name-container">
+      <h2>NATANIEL BEN-AMI</h2>
+      <h3>FRONT-END DEVELOPER</h3>
+    </div>
+  </header>
+    <h2 class="ew">Locations I have Lived</h2>
+      <h3 class="text">I was born in Morton Grove Illinois.  Morton Grove is a suburb of Chicago.  In college I lived in Champaign Illinois.  Upon making Aliyah I live in Petah Tikva.  I now live in Tel Aviv.</h3>
+    <div class="mapsContainer">
+      <iframe src="" id="iframeMap" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="bots">
+      <button class="bot" id="bot prev" onclick="prev()" disabled>Prev</button>
+      <button class="bot" id="bot next" onclick="next()">Next</button> 
+    </div>
+    <h2 class="ew">Education And Work Experience</h2>
+      <h3 class="text">After making Aliyah in 2017, I gained web developement skills. Initially through Udacity’s Front End web design boot camp, which was a course that I financed by a scholarship that I received from Google.  In this course I was introduced to HTML, CSS, JavaScript, JQuery and React.  I later took a job as a WordPress developer for a year and a half. Aside from using WordPress, I also used CSS on a daily basis in this position.</h3>
+      <div class="featured-work">
+        <h2 class"ew">FEATURED WORK</h2>
+      </div>
+      <div class="work-container">
+        <div>
+          <a href="https://github.com/Nate03281982/MyReads-Nate">
+            <img src="../images/myreads.png" class="books" alt="books" height="200" width="200">
+          </a>
+          <p>React-Book Organizer</p>
+        </div>
+        <div>
+          <a href="https://github.com/Nate03281982/React-Map-Project">
+            <img src="../images/chicago.jpg" class="map" alt="map"
+                height="200" width="200">
+          </a>
+          <p>React-map (wiki Api)</p>
+        </div>
+      </div>
+     <h2 class="ew">Activities</h2>
+     <h3 class="text">I like going to the beach.  I enjoy Windsurfing.  I also like going to the gym.</h3>
     <footer>
       <div class="bottombar">
         <a href="../index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="act">Contact</a>
-        </div>
+        <a href="about.html" class="act">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
       <div class="beforearray">This page was built using:</div>
       <div class="array" id="array"></div>
     </footer>
-    <script src="../js/contact.js"></script>
+ </div> 
+    <script src="../js/about.js"></script>
     <script src="../js/footer.js"></script>
 </body>
 </html>
