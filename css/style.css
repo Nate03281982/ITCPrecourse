@@ -20,11 +20,12 @@ body {
   }
 
 .container {
-  /* positioned relative to its normal position (top, bottom, left and right moves it from normal position */
+  /* positioned relative to its normal position (top, bottom, left and right moves it from normal position) */
   position: relative; 
   /* make element as wide as parent container, extra spacing will be done disrearding parent container */
   width: 100%;
-  /* element automatically adjusts height to display its content correctly, stops anything that would override rule */
+  /* element automatically adjusts height to display its content correctly*/ 
+  /* important stops anything that would override rule */
   height: auto !important;
   height: 100%;
   /* the shortest an element can be */
@@ -111,7 +112,8 @@ font-family: 'Nunito', sans-serif;
   color: green;
   font-family: 'Nunito', sans-serif;
   font-size: 15px;
-  /* can set width and height and margins and padding can be set and can placed in the same line of adjacent content */
+  /* can set width, height, margins and padding */
+  /* can be placed in the same line of adjacent content */
   display: inline-block;
   padding-top: 20px;
    }
@@ -147,7 +149,7 @@ font-family: 'Nunito', sans-serif;
   animation-duration: 5s;
   /* goes through the animation at same speed */
   animation-timing-function: linear;
-  /*makes animation repeat until clicked */
+  /*makes animation go 1 time */
   animation-iteration-count: 1;
   
 }
@@ -275,7 +277,7 @@ input, textarea{
   margin-bottom: 0.6rem;
   width: 100%;
   font-size: 0.7rem;
-  /*moves the input a llitle to the right and space top and bottom */
+  /* moves the input a litle to the right and space top and bottom */
   padding: 0.2rem;
   border-radius: 2px;
   border: 1px solid black;
@@ -324,11 +326,12 @@ cursor:not-allowed
 }
 
 footer {
-/* positioned with reference to the closest parent that has a position relative value. */ 
+/* positioned with reference to the closest parent that has a position relative value */ 
 position: absolute;
 bottom: 0;
 width: 100%;
-/* this makes the whole footer line black, before this the background only covered the buttons */
+/* this makes the whole footer line black */
+/* before this the background only covered the buttons */
 background-color: black;
 text-align: left;
 line-height: 20px;
