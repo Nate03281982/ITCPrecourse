@@ -15,7 +15,7 @@ fetch('https://api.github.com/users/Nate03281982')
     name_elm.innerText = data.name;
   });
 
- // this stops the links to my Linkin Github and stack overflow accounts from making the animation also start
+ // this stops the links to my Linkin, Github and stack overflow accounts from making the animation also start
  // there is a onClick to start the function linkHandler(event) on each of the a tags
   function linkHandler(event) {
     event.stopPropagation()
@@ -28,7 +28,7 @@ element.classList.remove("cardactive");
 // trigger a DOM reflow
 //reflow on an element is the calculation of its dimensions and position in the document
 //updates the properties of the elements in the DOM and they are then reinitialised
-//animation will run again like it’s the first time the animated element has been rendered
+//animation will run again like it’s the first time
 void element.offsetWidth;
 element.classList.add("cardactive");
 }
